@@ -9,7 +9,6 @@ npm-debug.log
 # IntelliJ
 .idea/
 *.iml
-.idea/
 
 # OSX
 .DS_Store
