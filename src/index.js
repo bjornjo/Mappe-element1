@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App.jsx';
+import App from './components/App.js';
+
 
 fetch('http://localhost:3000/albums')
     .then(res => res.json())
     .then(albums => {
         ReactDOM.render(
-        <App albums={albums} />,
+            <div>
+                <App albums={albums} />
+            </div>,
             document.getElementById('container')
         );
     });

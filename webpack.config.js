@@ -12,13 +12,11 @@ module.exports = {
         publicPath: '/static/'
     },
     plugins: [
-        new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.HotModuleReplacementPlugin()
     ],
     module: {
         loaders: [{
-            test: /\.jsx?/,
+            test: /\.jsx?$/,
             loaders: ['babel-loader'],
             include: path.join(__dirname, 'src')
         }]
