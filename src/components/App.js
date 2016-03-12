@@ -1,16 +1,39 @@
 import React from 'react';
 
-import Albums from './Albums.js';
-
 export default class App extends React.Component {
+
+    constructor(){
+        super();
+
+    }
+
+    sortYear(albums){
+        this.setState({})
+    }
+//.sort(function(a,b){return a.year - b.year})
     render() {
+
         return <div>
 
             <table>
-            {this.props.albums.map(album => <tr>
-                <td>{album.title}</td>
-                <td>{album.artist}</td>
-                <td>{album.year}</td></tr>)}
+                <thead>
+                    <tr>
+                        <th>TITLE</th>
+                        <th>ARTIST</th>
+                        <th>YEAR</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                {this.props.albums.map(album =>
+                    <tr>
+                        <td>{album.title}</td>
+                        <td>{album.artist}</td>
+                        <td>{album.year}</td>
+                    </tr>)}
+                </tbody>
+
+
             </table>
 
         </div>;

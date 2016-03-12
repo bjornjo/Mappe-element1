@@ -17,8 +17,7 @@ var albums = [];
 
 var filename = "albums.txt";
 readline.createInterface({
-    input: fs.createReadStream(filename),
-    terminal: false
+    input: fs.createReadStream(filename)
 }).on('line', function(line) {
     var split = line.split(";");
     var album = {
@@ -27,7 +26,11 @@ readline.createInterface({
         year: split[2]
     };
     albums.push(album);
+
 });
+
+
+
 
 app.use(webpackDevMiddleware(compiler, {
     noInfo: true,
